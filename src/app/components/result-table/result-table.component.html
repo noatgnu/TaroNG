@@ -1,0 +1,16 @@
+<div *ngIf="resultData" class="mt-2">
+  <ngx-datatable
+          style="height: 700px"
+          class="material fullscreen"
+          [rows]="resultData.result"
+          [columns]="columns"
+          [headerHeight]="50"
+          [footerHeight]="50"
+          [rowHeight]="50"
+          [scrollbarV]="true"
+          [scrollbarH]="true"
+          [columnMode]="columnMode.standard"
+  >
+
+  </ngx-datatable>
+</div>

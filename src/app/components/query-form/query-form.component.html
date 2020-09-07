@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Query Form</h5>
+    <form [formGroup]="queryForm" (ngSubmit)="submitQuery()">
+      <div class="form-group">
+        <label for="PeptideSequenceTextSearch">Peptide Sequence:</label>
+        <input formControlName="peptideSeq" type="text" class="form-control" id="PeptideSequenceTextSearch" aria-describedby="PetideText">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label for="StartCodonText">Start Codon:</label>
+          <input formControlName="startCodon" type="text" class="form-control" id="StartCodonText" aria-describedby="StartCodonText">
+        </div>
+        <div class="form-group col-6">
+          <label for="StopCodonText">Stop Codon:</label>
+          <input formControlName="endCodon" type="text" class="form-control" id="StopCodonText" aria-describedby="StopCodonText">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-4">
+          <label for="databaseSelection">Database:</label>
+          <select class="custom-select" formControlName="database" multiple id="databaseSelection" aria-describedby="DatabaseChoices">
+            <option>
+              ncEP
+            </option>
+            <option>
+              smProt
+            </option>
+            <option>
+              upep
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row mt-2">
+        <button class="button btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
